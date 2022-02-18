@@ -1,0 +1,958 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PrudentBankSQL" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-URMGVCS\SQLEXPRESS;Initial Catalog=PrudentBankSQL;Integrated Security=True;Pooling=False" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="PrudentBankSQLConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.texting_deposite" Member="texting_deposites">
+    <Type Name="texting_deposite">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="customerid" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="msg" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="accountno" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="phoneno" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="depositebalance" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="date" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="depositecollect" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="smsid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DepositeWeeklySMSUpdate" Member="DepositeWeeklySMSUpdates">
+    <Type Name="DepositeWeeklySMSUpdate">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SMSUpdate" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="SMSId" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WeeklySME" Member="WeeklySMEs">
+    <Type Name="WeeklySME">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SMSUpdate" Type="System.String" DbType="VarChar(140)" CanBeNull="true" />
+      <Column Name="SMSId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BridgeContract" Member="BridgeContracts">
+    <Type Name="BridgeContract">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ContractBridge" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NoOfMonthRemaining" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ContractNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoanExtension" Member="LoanExtensions">
+    <Type Name="LoanExtension">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CurentBalanceToBePaid" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="ExtendedDuration" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="ContractNo" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="OriginalLoanFacility" Type="System.String" DbType="VarChar(120) NOT NULL" CanBeNull="false" />
+      <Column Name="TotalDepositeAsAtDate" Type="System.String" DbType="VarChar(120) NOT NULL" CanBeNull="false" />
+      <Column Name="RemainingBalanceAtExpiration" Type="System.String" DbType="VarChar(120) NOT NULL" CanBeNull="false" />
+      <Column Name="Centage" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="AddedInterest" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="ContractDate1" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="ContractDate2" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="TotalLoanRollOver" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="VarChar(120) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Collateral" Member="Collaterals">
+    <Type Name="Collateral">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ContractNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Propic" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WeeklySMS" Member="WeeklySMs">
+    <Type Name="WeeklySM">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="customerid" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="msg" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="accountno" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="phoneno" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="depositebalance" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="date" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="depositecollect" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="smsid" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Transactions" Member="Transactions">
+    <Type Name="Transaction">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerId" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="FieldOfficer" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="AccountNo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PageNumber" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PhoneNo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ChartNo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Deposite_Withdraw" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PostedBy" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="SMSCharge" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="MonthYear" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="AccountBalance" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ZealluckProfit" Member="ZealluckProfits">
+    <Type Name="ZealluckProfit">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MonthYear" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="MonthlyProfit" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="AccountNo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ZealluckProfit1" Member="ZealluckProfit1s">
+    <Type Name="ZealluckProfit1">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MonthYear" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MonthlyProfit" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AccountNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ZealTable" Member="ZealTables">
+    <Type Name="ZealTable">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Endate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DateId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FinalProfit" Member="FinalProfits">
+    <Type Name="FinalProfit">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Gain" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StaffLogin" Member="StaffLogins">
+    <Type Name="StaffLogin">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="PassWord" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Active" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="EveryOne" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StaffSMS" Member="StaffSMs">
+    <Type Name="StaffSM">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PhoneNo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NewCustomer" Member="NewCustomers">
+    <Type Name="NewCustomer">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="occupation" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="branch" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="fieldofficer" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="customerid" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="gender" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="nationality" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="date" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="selfemploy" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="dateofbirth" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="customername" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="phoneno" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="VarChar(120) NOT NULL" CanBeNull="false" />
+      <Column Name="state" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="accountno" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="propic" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="SmsId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Default]" Member="Defaults">
+    <Type Name="Default">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Officer" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.block" Member="blocks">
+    <Type Name="block">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="No" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="staff" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Files" Member="Files">
+    <Type Name="File">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StaffName" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Department" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Propic" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mgtfee" Member="mgtfees">
+    <Type Name="mgtfee">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mgt" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Signature" Member="Signatures">
+    <Type Name="Signature">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AccountNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Propic" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Transfer" Member="Transfers">
+    <Type Name="Transfer">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Trans" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AdminUser" Member="AdminUsers">
+    <Type Name="AdminUser">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Active" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Everyone" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AdminTable" Member="AdminTables">
+    <Type Name="AdminTable">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="PassWord" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AdminTable1" Member="AdminTable1s">
+    <Type Name="AdminTable1">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="PassWord" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Chat1" Member="Chat1s">
+    <Type Name="Chat1">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StaffName" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Message" Type="System.String" DbType="VarChar(320)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Chat" Member="Chats">
+    <Type Name="Chat">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StaffName" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Message" Type="System.String" DbType="VarChar(320)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WeeklySME1" Member="WeeklySME1s">
+    <Type Name="WeeklySME1">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SMSUpdate" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="SMSId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AcctFixed" Member="AcctFixeds">
+    <Type Name="AcctFixed">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FieldOfficer" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="CashInHand1" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Date1" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="AccountNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FieldOfficer" Member="FieldOfficers">
+    <Type Name="FieldOfficer">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="FieldOfficer" Member="FieldOfficer1" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="CashInChat" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CashInHand" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Balance" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="AllOf" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FieldOfficerAmount" Member="FieldOfficerAmounts">
+    <Type Name="FieldOfficerAmount">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="FieldOfficer" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="CashInChat" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CashInHand" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Balance" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="AllOf" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Approved" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ApproveDate" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ApprovedBy" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="AccountNo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Def" Member="Defs">
+    <Type Name="Def">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Officer" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Month" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Guarantory" Member="Guarantories">
+    <Type Name="Guarantory">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Occupation" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Sector" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="EmploymentType" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="MaritalStatus" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="ResidentialAddress" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="EmploymentName" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="OfficeAddress" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="RelationshipToApplicant" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="TelephoneNo" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="OfficialEmail" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Propic" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserTable" Member="UserTable1s">
+    <Type Name="UserTable1">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoanPayment" Member="LoanPayments">
+    <Type Name="LoanPayment">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="MaturityDate" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Officer" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Payment" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="AccountNo" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="AccBalance" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StaffGuarantor" Member="StaffGuarantors">
+    <Type Name="StaffGuarantor">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Occupation" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Relationship" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="HomeAddress" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="PhoneNo" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="StaffName" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="MaritalStatus" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Propic" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HResourcesUser" Member="HResourcesUsers">
+    <Type Name="HResourcesUser">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Active" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Everyone" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoanUser" Member="LoanUsers">
+    <Type Name="LoanUser">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Active" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Everyone" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DepositeUser1" Member="DepositeUser1s">
+    <Type Name="DepositeUser1">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Active" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Everyone" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TMTFieldOfficeChatUser" Member="TMTFieldOfficeChatUsers">
+    <Type Name="TMTFieldOfficeChatUser">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Active" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Everyone" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WithdrawUser" Member="WithdrawUsers">
+    <Type Name="WithdrawUser">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Active" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Everyone" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TMTDateControlLoginUser" Member="TMTDateControlLoginUsers">
+    <Type Name="TMTDateControlLoginUser">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Active" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Everyone" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DepositeUser" Member="DepositeUsers">
+    <Type Name="DepositeUser">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Active" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Everyone" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CustomerCareUser" Member="CustomerCareUsers">
+    <Type Name="CustomerCareUser">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Active" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Everyone" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TMTCheckRecordUser" Member="TMTCheckRecordUsers">
+    <Type Name="TMTCheckRecordUser">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Active" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Everyone" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AccountingUser" Member="AccountingUsers">
+    <Type Name="AccountingUser">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Active" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Everyone" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tmt" Member="Tmts">
+    <Type Name="Tmt">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Option1" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="AllV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tmt1" Member="Tmt1s">
+    <Type Name="Tmt1">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Option1" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="AllV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tmt2" Member="Tmt2s">
+    <Type Name="Tmt2">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Option1" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="AllV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tmt3" Member="Tmt3s">
+    <Type Name="Tmt3">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Option1" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="AllV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tmt4" Member="Tmt4s">
+    <Type Name="Tmt4">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Option1" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="AllV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Leave" Member="Leaves">
+    <Type Name="Leave">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StaffName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="LeaveDate" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="LeaveRange" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="LeaveReason" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="LeaveResume" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="LeaveMonth" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ActiveStatus" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="NoOfLeave" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Year" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SMSAlertProfit" Member="SMSAlertProfits">
+    <Type Name="SMSAlertProfit">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Month" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="AccountNo" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Profit" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Year" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InitailDeposite" Member="InitailDeposites">
+    <Type Name="InitailDeposite">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Month" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="AccountNo" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Profit" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Year" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NewCustomerSMS" Member="NewCustomerSMs">
+    <Type Name="NewCustomerSM">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Month" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="AccountNo" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Profit" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Year" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PageNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UploadPic" Member="UploadPics">
+    <Type Name="UploadPic">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AccountNo" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Propic" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.greaterValue" Member="greaterValues">
+    <Type Name="greaterValue">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FieldOfficer" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="CashInHand" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoanAlert" Member="LoanAlerts">
+    <Type Name="LoanAlert">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AccountNo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="MaturityDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TransactProfit" Member="TransactProfits">
+    <Type Name="TransactProfit">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MonthProfit" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Year" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Month" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AccountNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Complain" Member="Complains">
+    <Type Name="Complain">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Complain" Member="Complain1" Type="System.String" DbType="VarChar(1220)" CanBeNull="true" />
+      <Column Name="StaffName" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StaffPost" Member="StaffPosts">
+    <Type Name="StaffPost">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PostedBy" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="FieldOfficer" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WeeklySMS1" Member="WeeklySMS1s">
+    <Type Name="WeeklySMS1">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="customerid" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="msg" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="accountno" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="phoneno" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="depositebalance" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="date" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="depositecollect" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="smCharge" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="month" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Year" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.YearlyAnalysis" Member="YearlyAnalysis">
+    <Type Name="YearlyAnalysi">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Amount" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Year" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AccountTill" Member="AccountTills">
+    <Type Name="AccountTill">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PostedBy" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="MonthYear" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="RecievedBy" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="AmountRelease" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TellerTill" Member="TellerTills">
+    <Type Name="TellerTill">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AccountNo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="SlipNo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PostedBy" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Approved" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ApprovedDate" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ApprovedBy" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoanElapse" Member="LoanElapses">
+    <Type Name="LoanElapse">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AccountNo" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AddBranch" Member="AddBranches">
+    <Type Name="AddBranch">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Admin" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AccountType" Member="AccountTypes">
+    <Type Name="AccountType">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AcctType" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Admin" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserTable" Member="UserTables">
+    <Type Name="UserTable">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Withdraw" Member="Withdraws">
+    <Type Name="Withdraw">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerId" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="FieldOfficer" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="AccountNo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PageNumber" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PhoneNo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ChartNo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Withdraw" Member="Withdraw1" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PostedBy" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="AccountBalance" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="SMSCharges" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="MonthYear" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Birthday" Member="Birthdays">
+    <Type Name="Birthday">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StaffName" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Date1" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="PhoneNo" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Emergency" Member="Emergencies">
+    <Type Name="Emergency">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StaffName" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="EmergencyNeed" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Emergency" Member="Emergency1" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Month" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Staff" Member="Staffs">
+    <Type Name="Staff">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="StaffName" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Nationality" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Birth" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Home" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Religion" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Birthday" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Department" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Qualification" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="EmailAdd" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="PhoneNo" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Propic" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="ActiveStatus" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Salary" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="StaffPosition" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Payment" Member="Payments">
+    <Type Name="Payment">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MonthlySalaryPayment" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="StaffName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Emergency" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="MonthlyBenefit" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Allowance" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="EmergencyNeed" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Year" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Salary" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DormantAccount" Member="DormantAccounts">
+    <Type Name="DormantAccount">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerId" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="FieldOfficer" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="AccountNo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PageNumber" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PhoneNo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="BankCharge" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PostedBy" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="AccountType" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="AccountBalance" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AllNumber" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="NoOfMonth" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Coment" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="MaturityDate" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Interest" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Month" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Year" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="InterestPercent" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Months" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Dates" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Performance" Member="Performances">
+    <Type Name="Performance">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Deposite" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Withdraw" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Inventory" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="MonthYear" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="AdminOfficer" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Profit" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="TotalProfit" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Deposite" Member="Deposites">
+    <Type Name="Deposite">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerId" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="FieldOfficer" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="AccountNo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PageNumber" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Deposite" Member="Deposite1" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PhoneNo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ChartNo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PostedBy" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="AccountBalance" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SMSCharge" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="MonthYear" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Inventory" Member="Inventories">
+    <Type Name="Inventory">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Year" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ListOfInventory" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="FieldOfficer" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Month" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Dates" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FreezAcount" Member="FreezAcounts">
+    <Type Name="FreezAcount">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FreezAccountNo" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="AccountBalance" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="AccountType" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TransactProfit2" Member="TransactProfit2s">
+    <Type Name="TransactProfit2">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MonthProfit" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Year" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Month" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="AccountNo" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.YearlyProfit" Member="YearlyProfits">
+    <Type Name="YearlyProfit">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="YearGain" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Year" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Month" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="AccountNo" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NewAcount" Member="NewAcounts">
+    <Type Name="NewAcount">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerId" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="FieldOfficer" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="AccountNo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PageNumber" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PhoneNo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="BankCharge" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PostedBy" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="AccountType" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="AccountBalance" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SmsId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Coment" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="MaturityDate" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="NoOfMonth" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Interest" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Month" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Year" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="InterestPercent" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Months" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Dates" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BuckFixedSMS1" Member="BuckFixedSMS1s">
+    <Type Name="BuckFixedSMS1">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="customerid" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="msg" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="accountno" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="phoneno" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="depositebalance" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="date" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="depositecollect" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="month" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="smsid" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SmsProfit" Member="SmsProfits">
+    <Type Name="SmsProfit">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AcctNo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="SmsPrice" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="AcctType" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="MonthYear" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BuckFixedSMS" Member="BuckFixedSMs">
+    <Type Name="BuckFixedSM">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="customerid" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="msg" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="accountno" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="phoneno" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="depositebalance" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="date" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="depositecollect" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="smsCharge" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="month" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Year" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="sms" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Contracts" Member="Contracts">
+    <Type Name="Contract">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerId" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="FieldOfficer" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="ManagementFee" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="CustomerName" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="ContractDate1" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="ExpiringDate" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="MaturityDate" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="LoanAmount" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="ApprovedDate" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="ModeOfPayment" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="CustomerAddress" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="TypeOfBusiness" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="CompanyAddress" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="PurposeOfLoan" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="PhoneNo" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Interest" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="AccountType" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="AccountNo" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="InterestValue" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Year" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="LoanCheck" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Deposite" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="AccountBalance" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Propic" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Terminate" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoanInterest" Member="LoanInterests">
+    <Type Name="LoanInterest">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NoOfMonth" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="LoanAmount" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="MaturityDate" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Interest" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ContractNo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="CustomerName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ManagementFee" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Month" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="AccountBalance" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="AccountType" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

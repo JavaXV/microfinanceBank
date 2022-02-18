@@ -1,0 +1,1314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{50AD102D-EC17-49F8-B5C7-C67FDD0F4F43}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BankA</RootNamespace>
+    <AssemblyName>BankA</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="666.aspx" />
+    <Content Include="777.aspx" />
+    <Content Include="AccountDefault.aspx" />
+    <Content Include="AccountHRpay.aspx" />
+    <Content Include="AccountHRview.aspx" />
+    <Content Include="Accounting.aspx" />
+    <Content Include="AccountingLogin.aspx" />
+    <Content Include="AdminActivate.aspx" />
+    <Content Include="AdminLogin1.aspx" />
+    <Content Include="ApprovedFieldOfficer.aspx" />
+    <Content Include="BridgeContract.aspx" />
+    <Content Include="CalenderLeave.aspx" />
+    <Content Include="ContractAgreementChart.aspx" />
+    <Content Include="CustomerCare.aspx" />
+    <Content Include="CustomerCareChat.aspx" />
+    <Content Include="CustomerView.aspx" />
+    <Content Include="DepositeAdmin.aspx" />
+    <Content Include="DepositeChart.aspx" />
+    <Content Include="DepositeHead.aspx" />
+    <Content Include="DepositeLogin.aspx" />
+    <Content Include="DepositeLoginHead.aspx" />
+    <Content Include="Document\alesia-kazantceva-VWcPlbHglYc-unsplash-1.jpg" />
+    <Content Include="Document\alvin-engler-bIhpiQA009k-unsplash-1.jpg" />
+    <Content Include="Document\bank1.jpg" />
+    <Content Include="Document\bank3.jpg" />
+    <Content Include="EmergencyNeed.aspx" />
+    <Content Include="FieldOfficer.aspx" />
+    <Content Include="FieldOfficer1.aspx" />
+    <Content Include="File.aspx" />
+    <Content Include="FinancialTable.aspx" />
+    <Content Include="GeneralAdmin.aspx" />
+    <Content Include="GeneralChat.aspx" />
+    <Content Include="Guarantor.aspx" />
+    <Content Include="GuarantorDocument.aspx" />
+    <Content Include="HR.aspx" />
+    <Content Include="HRChat.aspx" />
+    <Content Include="HRComplain.aspx" />
+    <Content Include="HRComplainView.aspx" />
+    <Content Include="HRFant.aspx" />
+    <Content Include="HRFinal.aspx" />
+    <Content Include="HRLogin.aspx" />
+    <Content Include="HRpayment.aspx" />
+    <Content Include="HRrecruit.aspx" />
+    <Content Include="HRStaffView.aspx" />
+    <Content Include="IfApproved.aspx" />
+    <Content Include="imagerying\1.JPG" />
+    <Content Include="imagerying\2.JPG" />
+    <Content Include="imagerying\3.JPG" />
+    <Content Include="imagerying\4.JPG" />
+    <Content Include="imagerying\5.JPG" />
+    <Content Include="imagerying\6.JPG" />
+    <Content Include="imagerying\7.JPG" />
+    <Content Include="imagery\1.JPG" />
+    <Content Include="imagery\2.JPG" />
+    <Content Include="imagery\3.JPG" />
+    <Content Include="imagery\4.JPG" />
+    <Content Include="imagery\5.JPG" />
+    <Content Include="imagery\6.JPG" />
+    <Content Include="imagery\7.JPG" />
+    <Content Include="imagery\patter.PNG" />
+    <Content Include="imagery\remote.JPG" />
+    <Content Include="images\65.jpg" />
+    <Content Include="images\6.jpg" />
+    <Content Include="images\67.jpg" />
+    <Content Include="images\51.jpg" />
+    <Content Include="images\58.jpg" />
+    <Content Include="images\60.jpg" />
+    <Content Include="images\61.jpg" />
+    <Content Include="images\62.jpg" />
+    <Content Include="images\63.jpg" />
+    <Content Include="images\64.jpg" />
+    <Content Include="images\66.jpg" />
+    <Content Include="images\68.jpg" />
+    <Content Include="images\69.jpg" />
+    <Content Include="images\71.jpg" />
+    <Content Include="images\72.jpg" />
+    <Content Include="images\76.jpg" />
+    <Content Include="images\79.jpg" />
+    <Content Include="images\80.jpg" />
+    <Content Include="images\86.jpg" />
+    <Content Include="images\87.jpg" />
+    <Content Include="images\91.jpg" />
+    <Content Include="images\92.jpg" />
+    <Content Include="images\95.jpg" />
+    <Content Include="images\97.jpg" />
+    <Content Include="images\98.jpg" />
+    <Content Include="images\55.jpg" />
+    <Content Include="images\36.jpg" />
+    <Content Include="images\11.jpg" />
+    <Content Include="images\12.jpg" />
+    <Content Include="images\13.jpg" />
+    <Content Include="images\18.jpg" />
+    <Content Include="images\27.jpg" />
+    <Content Include="images\46.jpg" />
+    <Content Include="images\59.jpg" />
+    <Content Include="images\IMG_3576.jpg" />
+    <Content Include="images\IMG_3581.jpg" />
+    <Content Include="images\IMG_3584.jpg" />
+    <Content Include="images\IMG_3589.jpg" />
+    <Content Include="images\IMG_3590.jpg" />
+    <Content Include="images\IMG_3596.jpg" />
+    <Content Include="images\IMG_3602.jpg" />
+    <Content Include="images\IMG_3612.jpg" />
+    <Content Include="images\IMG_3614.jpg" />
+    <Content Include="images\IMG_3618.jpg" />
+    <Content Include="images\IMG_3622.jpg" />
+    <Content Include="images\IMG_3623.jpg" />
+    <Content Include="images\IMG_3628.jpg" />
+    <Content Include="images\IMG_3630.jpg" />
+    <Content Include="images\IMG_3632.jpg" />
+    <Content Include="images\IMG_7742.jpg" />
+    <Content Include="images\IMG_7746-2.jpg" />
+    <Content Include="images\IMG_7746.jpg" />
+    <Content Include="images\IMG_7750-2.jpg" />
+    <Content Include="images\IMG_7750.jpg" />
+    <Content Include="images\IMG_7752.jpg" />
+    <Content Include="images\IMG_7753.jpg" />
+    <Content Include="images\IMG_7755-2.jpg" />
+    <Content Include="images\IMG_7756-2.jpg" />
+    <Content Include="images\IMG_7758.jpg" />
+    <Content Include="images\IMG_7759.jpg" />
+    <Content Include="images\IMG_7760.jpg" />
+    <Content Include="images\IMG_7762.jpg" />
+    <Content Include="images\IMG_7764.jpg" />
+    <Content Include="images\IMG_7768.jpg" />
+    <Content Include="images\IMG_7769-2.jpg" />
+    <Content Include="images\IMG_7774.jpg" />
+    <Content Include="images\IMG_7779.jpg" />
+    <Content Include="images\IMG_7780.jpg" />
+    <Content Include="images\IMG_7782.jpg" />
+    <Content Include="images\IMG_7783.jpg" />
+    <Content Include="images\IMG_7784.jpg" />
+    <Content Include="images\IMG_7785.jpg" />
+    <Content Include="images\IMG_7787-2.jpg" />
+    <Content Include="images\IMG_7789.jpg" />
+    <Content Include="images\IMG_7790.jpg" />
+    <Content Include="images\IMG_7792.jpg" />
+    <Content Include="images\IMG_7794-2.jpg" />
+    <Content Include="images\IMG_7796-2.jpg" />
+    <Content Include="images\IMG_7798-2.jpg" />
+    <Content Include="images\IMG_7801.jpg" />
+    <Content Include="images\IMG_7802-2.jpg" />
+    <Content Include="images\IMG_7803.jpg" />
+    <Content Include="images\IMG_7806.jpg" />
+    <Content Include="images\IMG_7811.jpg" />
+    <Content Include="images\IMG_7818.jpg" />
+    <Content Include="images\IMG_7819.jpg" />
+    <Content Include="images\IMG_7824.jpg" />
+    <Content Include="images\IMG_7826.jpg" />
+    <Content Include="images\IMG_7830-2.jpg" />
+    <Content Include="images\IMG_7835-2.jpg" />
+    <Content Include="images\IMG_7841.jpg" />
+    <Content Include="images\IMG_7842.jpg" />
+    <Content Include="images\IMG_7843-2.jpg" />
+    <Content Include="images\IMG_7847.jpg" />
+    <Content Include="images\IMG_7850.jpg" />
+    <Content Include="images\IMG_7851.jpg" />
+    <Content Include="images\IMG_7853-2.jpg" />
+    <Content Include="images\IMG_7856-2.jpg" />
+    <Content Include="images\IMG_7857.jpg" />
+    <Content Include="images\IMG_7861-2.jpg" />
+    <Content Include="images\IMG_7865.jpg" />
+    <Content Include="images\IMG_7867.jpg" />
+    <Content Include="images\IMG_7868.jpg" />
+    <Content Include="images\IMG_7869.jpg" />
+    <Content Include="images\IMG_7871.jpg" />
+    <Content Include="images\IMG_7872.jpg" />
+    <Content Include="images\IMG_7873.jpg" />
+    <Content Include="images\IMG_7875.jpg" />
+    <Content Include="images\IMG_7876-2.jpg" />
+    <Content Include="images\IMG_7882.jpg" />
+    <Content Include="images\IMG_7886.jpg" />
+    <Content Include="images\IMG_7889.jpg" />
+    <Content Include="images\IMG_7890.jpg" />
+    <Content Include="images\IMG_7891-2.jpg" />
+    <Content Include="images\IMG_7896.jpg" />
+    <Content Include="images\IMG_7900.jpg" />
+    <Content Include="images\IMG_7901-2.jpg" />
+    <Content Include="images\IMG_7903-2.jpg" />
+    <Content Include="images\IMG_7905-2.jpg" />
+    <Content Include="images\IMG_7906-2.jpg" />
+    <Content Include="images\IMG_7911-2.jpg" />
+    <Content Include="images\IMG_7914-2.jpg" />
+    <Content Include="images\IMG_7920-2.jpg" />
+    <Content Include="images\IMG_7925-2.jpg" />
+    <Content Include="images\IMG_7932.jpg" />
+    <Content Include="images\IMG_7933.jpg" />
+    <Content Include="images\IMG_7934.jpg" />
+    <Content Include="images\IMG_7936-2.jpg" />
+    <Content Include="images\IMG_7937-2.jpg" />
+    <Content Include="images\IMG_7940.jpg" />
+    <Content Include="images\IMG_7942.jpg" />
+    <Content Include="images\IMG_7943.jpg" />
+    <Content Include="images\IMG_7945.jpg" />
+    <Content Include="images\IMG_7948.jpg" />
+    <Content Include="images\IMG_7965.jpg" />
+    <Content Include="images\IMG_7967.jpg" />
+    <Content Include="images\IMG_7974.jpg" />
+    <Content Include="images\IMG_7977.jpg" />
+    <Content Include="images\IMG_7980.jpg" />
+    <Content Include="images\IMG_7982.jpg" />
+    <Content Include="images\IMG_7984.jpg" />
+    <Content Include="images\IMG_7987.jpg" />
+    <Content Include="images\IMG_7990.jpg" />
+    <Content Include="images\IMG_7991.jpg" />
+    <Content Include="images\IMG_7997.jpg" />
+    <Content Include="images\IMG_8004.jpg" />
+    <Content Include="images\IMG_8007.jpg" />
+    <Content Include="images\IMG_8008.jpg" />
+    <Content Include="images\IMG_8016.jpg" />
+    <Content Include="images\IMG_8020.jpg" />
+    <Content Include="images\IMG_8021.jpg" />
+    <Content Include="images\IMG_8022.jpg" />
+    <Content Include="images\IMG_8030.jpg" />
+    <Content Include="images\IMG_8031.jpg" />
+    <Content Include="images\IMG_8034.jpg" />
+    <Content Include="images\IMG_8035.jpg" />
+    <Content Include="images\IMG_8036.jpg" />
+    <Content Include="images\IMG_8062.jpg" />
+    <Content Include="images\IMG_8063.jpg" />
+    <Content Include="images\IMG_8064.jpg" />
+    <Content Include="images\IMG_8065.jpg" />
+    <Content Include="images\IMG_8066.jpg" />
+    <Content Include="images\IMG_8069.jpg" />
+    <Content Include="images\IMG_8071.jpg" />
+    <Content Include="images\IMG_8075.jpg" />
+    <Content Include="images\IMG_8077.jpg" />
+    <Content Include="images\IMG_8102.jpg" />
+    <Content Include="images\IMG_8106.jpg" />
+    <Content Include="images\IMG_8111.jpg" />
+    <Content Include="images\IMG_8116.jpg" />
+    <Content Include="images\IMG_8120.jpg" />
+    <Content Include="images\IMG_8121.jpg" />
+    <Content Include="images\IMG_8126.jpg" />
+    <Content Include="images\IMG_8127.jpg" />
+    <Content Include="images\IMG_8132.jpg" />
+    <Content Include="images\IMG_8136.jpg" />
+    <Content Include="images\IMG_8139.jpg" />
+    <Content Include="images\IMG_8142.jpg" />
+    <Content Include="images\IMG_8143.jpg" />
+    <Content Include="images\IMG_8144.jpg" />
+    <Content Include="images\IMG_8146 %282%29.jpg" />
+    <Content Include="images\IMG_8146 %283%29.jpg" />
+    <Content Include="images\IMG_8146.jpg" />
+    <Content Include="images\IMG_8149.jpg" />
+    <Content Include="images\IMG_8151.jpg" />
+    <Content Include="images\IMG_8157.jpg" />
+    <Content Include="images\IMG_8158.jpg" />
+    <Content Include="images\IMG_8161.jpg" />
+    <Content Include="images\IMG_8167.jpg" />
+    <Content Include="images\IMG_8171.jpg" />
+    <Content Include="images\IMG_8172.jpg" />
+    <Content Include="images\IMG_8173.jpg" />
+    <Content Include="images\IMG_8174.jpg" />
+    <Content Include="images\IMG_8175.jpg" />
+    <Content Include="images\IMG_8176.jpg" />
+    <Content Include="images\IMG_8178.jpg" />
+    <Content Include="images\IMG_8180.jpg" />
+    <Content Include="images\IMG_8182.jpg" />
+    <Content Include="images\IMG_8183.jpg" />
+    <Content Include="images\IMG_8184.jpg" />
+    <Content Include="images\IMG_8185.jpg" />
+    <Content Include="images\IMG_8191.jpg" />
+    <Content Include="images\IMG_8195.jpg" />
+    <Content Include="images\IMG_8198.jpg" />
+    <Content Include="images\IMG_8199.jpg" />
+    <Content Include="images\IMG_8201.jpg" />
+    <Content Include="images\IMG_8203.jpg" />
+    <Content Include="images\2.jpg" />
+    <Content Include="images\3.jpg" />
+    <Content Include="images\1.jpg" />
+    <Content Include="images\4.jpg" />
+    <Content Include="Inventory.aspx" />
+    <Content Include="LoanAgreement.aspx" />
+    <Content Include="LoanAgreement1.aspx" />
+    <Content Include="LoanAgreementLogin.aspx" />
+    <Content Include="LoanChart.aspx" />
+    <Content Include="LoanExtensionLogin.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="MD.aspx" />
+    <Content Include="MDauthentication.aspx" />
+    <Content Include="MDauthentication1.aspx" />
+    <Content Include="MDLogin.aspx" />
+    <Content Include="MDTmt.aspx" />
+    <Content Include="MDview.aspx" />
+    <Content Include="MonthlyPayment.aspx" />
+    <Content Include="MonthlyProfit.aspx" />
+    <Content Include="NewCustomerChart.aspx" />
+    <Content Include="NewCustomerChart1.aspx" />
+    <Content Include="NewCustomerLogin.aspx" />
+    <Content Include="NewCustomerTransact.aspx" />
+    <Content Include="Payment.aspx" />
+    <Content Include="Performance.aspx" />
+    <Content Include="PlainLink.aspx" />
+    <Content Include="PrintChart.aspx" />
+    <Content Include="privateACCOUNT.aspx" />
+    <Content Include="privateaccountview.aspx" />
+    <Content Include="privateLoan.aspx" />
+    <Content Include="privateloanview.aspx" />
+    <Content Include="privateTMT.aspx" />
+    <Content Include="privatetmtview.aspx" />
+    <Content Include="Scripts\About.aspx" />
+    <Content Include="imagerying\Account\ChangePassword.aspx" />
+    <Content Include="imagerying\Account\ChangePasswordSuccess.aspx" />
+    <Content Include="imagerying\Account\Login.aspx" />
+    <Content Include="imagerying\Account\Register.aspx" />
+    <Content Include="AdminDashboard.aspx" />
+    <Content Include="ContractAgreement.aspx" />
+    <Content Include="CustomerTrasact.aspx" />
+    <Content Include="Deposite.aspx" />
+    <Content Include="CustomerDashboard2.aspx" />
+    <Content Include="CustomerLogin.aspx" />
+    <Content Include="icon\054-256.png" />
+    <Content Include="icon\057-256.png" />
+    <Content Include="icon\058-256.png" />
+    <Content Include="icon\061-256 %281%29.png" />
+    <Content Include="icon\061-256.png" />
+    <Content Include="icon\069-256.png" />
+    <Content Include="icon\071-256.png" />
+    <Content Include="icon\072-256.png" />
+    <Content Include="icon\073-256.png" />
+    <Content Include="icon\081-256.png" />
+    <Content Include="icon\081-512.png" />
+    <Content Include="icon\083-256.png" />
+    <Content Include="icon\084-256.png" />
+    <Content Include="icon\1165725.png" />
+    <Content Include="icon\125503.png" />
+    <Content Include="icon\53928424_2348166381880585_3496315975530184704_n.png" />
+    <Content Include="icon\98822820-diligent-serious-positive-fellow-students-having-group-work-tasks-during-school-day.jpg" />
+    <Content Include="icon\approve-and-update.png" />
+    <Content Include="icon\bank-deposit-icon-8.jpg" />
+    <Content Include="icon\camera.png" />
+    <Content Include="icon\dashboard-alt-icon.png" />
+    <Content Include="icon\fingerprint-06-256.png" />
+    <Content Include="icon\fingerprint-07-256.png" />
+    <Content Include="icon\fingerprint-09-256.png" />
+    <Content Include="icon\fingerprint-icon-png-18.jpg" />
+    <Content Include="icon\Image.png" />
+    <Content Include="icon\images-%284%29.jpeg" />
+    <Content Include="icon\New.png" />
+    <Content Include="icon\speed-256.png" />
+    <Content Include="icon\students-256.png" />
+    <Content Include="icon\user_male_block.png" />
+    <Content Include="icon\x-10-2-256.png" />
+    <Content Include="index.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="LoanBioData.aspx" />
+    <Content Include="LoanExtension.aspx" />
+    <Content Include="LoanExtensionAg.aspx" />
+    <Content Include="LoanLogin.aspx" />
+    <Content Include="LoanPanel.aspx" />
+    <Content Include="MakeDeposite.aspx" />
+    <Content Include="MakeWithdraw.aspx" />
+    <Content Include="StaffGuarantor.aspx" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Teller.aspx" />
+    <Content Include="TellerTill.aspx" />
+    <Content Include="TillApproved.aspx" />
+    <Content Include="Tmt1.aspx" />
+    <Content Include="Tmt2.aspx" />
+    <Content Include="TmtApproval.aspx" />
+    <Content Include="TmtCheckApproved.aspx" />
+    <Content Include="TmtCheckRecordLogin.aspx" />
+    <Content Include="TmtFieldOfficerLogin.aspx" />
+    <Content Include="TmtLogin.aspx" />
+    <Content Include="Total.aspx" />
+    <Content Include="Transaction.aspx" />
+    <Content Include="TransactionLogin.aspx" />
+    <Content Include="video.aspx" />
+    <Content Include="ViewCollateral.aspx" />
+    <Content Include="ViewInventory.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WeeklyLoanSMS.aspx" />
+    <Content Include="Withdraw.aspx" />
+    <Content Include="WithdrawAdmin.aspx" />
+    <Content Include="WithdrawChart.aspx" />
+    <Content Include="WithdrawLogin.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="666.aspx.cs">
+      <DependentUpon>666.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="666.aspx.designer.cs">
+      <DependentUpon>666.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="777.aspx.cs">
+      <DependentUpon>777.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="777.aspx.designer.cs">
+      <DependentUpon>777.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountDefault.aspx.cs">
+      <DependentUpon>AccountDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountDefault.aspx.designer.cs">
+      <DependentUpon>AccountDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountHRpay.aspx.cs">
+      <DependentUpon>AccountHRpay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountHRpay.aspx.designer.cs">
+      <DependentUpon>AccountHRpay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountHRview.aspx.cs">
+      <DependentUpon>AccountHRview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountHRview.aspx.designer.cs">
+      <DependentUpon>AccountHRview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting.aspx.cs">
+      <DependentUpon>Accounting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting.aspx.designer.cs">
+      <DependentUpon>Accounting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountingLogin.aspx.cs">
+      <DependentUpon>AccountingLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountingLogin.aspx.designer.cs">
+      <DependentUpon>AccountingLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminActivate.aspx.cs">
+      <DependentUpon>AdminActivate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminActivate.aspx.designer.cs">
+      <DependentUpon>AdminActivate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLogin1.aspx.cs">
+      <DependentUpon>AdminLogin1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLogin1.aspx.designer.cs">
+      <DependentUpon>AdminLogin1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApprovedFieldOfficer.aspx.cs">
+      <DependentUpon>ApprovedFieldOfficer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApprovedFieldOfficer.aspx.designer.cs">
+      <DependentUpon>ApprovedFieldOfficer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BridgeContract.aspx.cs">
+      <DependentUpon>BridgeContract.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BridgeContract.aspx.designer.cs">
+      <DependentUpon>BridgeContract.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CalenderLeave.aspx.cs">
+      <DependentUpon>CalenderLeave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CalenderLeave.aspx.designer.cs">
+      <DependentUpon>CalenderLeave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContractAgreementChart.aspx.cs">
+      <DependentUpon>ContractAgreementChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContractAgreementChart.aspx.designer.cs">
+      <DependentUpon>ContractAgreementChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerCare.aspx.cs">
+      <DependentUpon>CustomerCare.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerCare.aspx.designer.cs">
+      <DependentUpon>CustomerCare.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerCareChat.aspx.cs">
+      <DependentUpon>CustomerCareChat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerCareChat.aspx.designer.cs">
+      <DependentUpon>CustomerCareChat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerView.aspx.cs">
+      <DependentUpon>CustomerView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerView.aspx.designer.cs">
+      <DependentUpon>CustomerView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepositeAdmin.aspx.cs">
+      <DependentUpon>DepositeAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepositeAdmin.aspx.designer.cs">
+      <DependentUpon>DepositeAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepositeChart.aspx.cs">
+      <DependentUpon>DepositeChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepositeChart.aspx.designer.cs">
+      <DependentUpon>DepositeChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepositeHead.aspx.cs">
+      <DependentUpon>DepositeHead.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepositeHead.aspx.designer.cs">
+      <DependentUpon>DepositeHead.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepositeLogin.aspx.cs">
+      <DependentUpon>DepositeLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepositeLogin.aspx.designer.cs">
+      <DependentUpon>DepositeLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepositeLoginHead.aspx.cs">
+      <DependentUpon>DepositeLoginHead.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepositeLoginHead.aspx.designer.cs">
+      <DependentUpon>DepositeLoginHead.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmergencyNeed.aspx.cs">
+      <DependentUpon>EmergencyNeed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmergencyNeed.aspx.designer.cs">
+      <DependentUpon>EmergencyNeed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FieldOfficer.aspx.cs">
+      <DependentUpon>FieldOfficer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FieldOfficer.aspx.designer.cs">
+      <DependentUpon>FieldOfficer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FieldOfficer1.aspx.cs">
+      <DependentUpon>FieldOfficer1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FieldOfficer1.aspx.designer.cs">
+      <DependentUpon>FieldOfficer1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="File.aspx.cs">
+      <DependentUpon>File.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="File.aspx.designer.cs">
+      <DependentUpon>File.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialTable.aspx.cs">
+      <DependentUpon>FinancialTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialTable.aspx.designer.cs">
+      <DependentUpon>FinancialTable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralAdmin.aspx.cs">
+      <DependentUpon>GeneralAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GeneralAdmin.aspx.designer.cs">
+      <DependentUpon>GeneralAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralChat.aspx.cs">
+      <DependentUpon>GeneralChat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GeneralChat.aspx.designer.cs">
+      <DependentUpon>GeneralChat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Guarantor.aspx.cs">
+      <DependentUpon>Guarantor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guarantor.aspx.designer.cs">
+      <DependentUpon>Guarantor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GuarantorDocument.aspx.cs">
+      <DependentUpon>GuarantorDocument.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GuarantorDocument.aspx.designer.cs">
+      <DependentUpon>GuarantorDocument.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HR.aspx.cs">
+      <DependentUpon>HR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HR.aspx.designer.cs">
+      <DependentUpon>HR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HRChat.aspx.cs">
+      <DependentUpon>HRChat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRChat.aspx.designer.cs">
+      <DependentUpon>HRChat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HRComplain.aspx.cs">
+      <DependentUpon>HRComplain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRComplain.aspx.designer.cs">
+      <DependentUpon>HRComplain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HRComplainView.aspx.cs">
+      <DependentUpon>HRComplainView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRComplainView.aspx.designer.cs">
+      <DependentUpon>HRComplainView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HRFant.aspx.cs">
+      <DependentUpon>HRFant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRFant.aspx.designer.cs">
+      <DependentUpon>HRFant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HRFinal.aspx.cs">
+      <DependentUpon>HRFinal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRFinal.aspx.designer.cs">
+      <DependentUpon>HRFinal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HRLogin.aspx.cs">
+      <DependentUpon>HRLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRLogin.aspx.designer.cs">
+      <DependentUpon>HRLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HRpayment.aspx.cs">
+      <DependentUpon>HRpayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRpayment.aspx.designer.cs">
+      <DependentUpon>HRpayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HRrecruit.aspx.cs">
+      <DependentUpon>HRrecruit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRrecruit.aspx.designer.cs">
+      <DependentUpon>HRrecruit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HRStaffView.aspx.cs">
+      <DependentUpon>HRStaffView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRStaffView.aspx.designer.cs">
+      <DependentUpon>HRStaffView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IfApproved.aspx.cs">
+      <DependentUpon>IfApproved.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IfApproved.aspx.designer.cs">
+      <DependentUpon>IfApproved.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory.aspx.cs">
+      <DependentUpon>Inventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventory.aspx.designer.cs">
+      <DependentUpon>Inventory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoanAgreement.aspx.cs">
+      <DependentUpon>LoanAgreement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoanAgreement.aspx.designer.cs">
+      <DependentUpon>LoanAgreement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoanAgreement1.aspx.cs">
+      <DependentUpon>LoanAgreement1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoanAgreement1.aspx.designer.cs">
+      <DependentUpon>LoanAgreement1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoanAgreementLogin.aspx.cs">
+      <DependentUpon>LoanAgreementLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoanAgreementLogin.aspx.designer.cs">
+      <DependentUpon>LoanAgreementLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoanChart.aspx.cs">
+      <DependentUpon>LoanChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoanChart.aspx.designer.cs">
+      <DependentUpon>LoanChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoanExtensionLogin.aspx.cs">
+      <DependentUpon>LoanExtensionLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoanExtensionLogin.aspx.designer.cs">
+      <DependentUpon>LoanExtensionLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MD.aspx.cs">
+      <DependentUpon>MD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MD.aspx.designer.cs">
+      <DependentUpon>MD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MDauthentication.aspx.cs">
+      <DependentUpon>MDauthentication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MDauthentication.aspx.designer.cs">
+      <DependentUpon>MDauthentication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MDauthentication1.aspx.cs">
+      <DependentUpon>MDauthentication1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MDauthentication1.aspx.designer.cs">
+      <DependentUpon>MDauthentication1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MDLogin.aspx.cs">
+      <DependentUpon>MDLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MDLogin.aspx.designer.cs">
+      <DependentUpon>MDLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MDTmt.aspx.cs">
+      <DependentUpon>MDTmt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MDTmt.aspx.designer.cs">
+      <DependentUpon>MDTmt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MDview.aspx.cs">
+      <DependentUpon>MDview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MDview.aspx.designer.cs">
+      <DependentUpon>MDview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MonthlyPayment.aspx.cs">
+      <DependentUpon>MonthlyPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MonthlyPayment.aspx.designer.cs">
+      <DependentUpon>MonthlyPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MonthlyProfit.aspx.cs">
+      <DependentUpon>MonthlyProfit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MonthlyProfit.aspx.designer.cs">
+      <DependentUpon>MonthlyProfit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewCustomerChart.aspx.cs">
+      <DependentUpon>NewCustomerChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewCustomerChart.aspx.designer.cs">
+      <DependentUpon>NewCustomerChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewCustomerChart1.aspx.cs">
+      <DependentUpon>NewCustomerChart1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewCustomerChart1.aspx.designer.cs">
+      <DependentUpon>NewCustomerChart1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewCustomerLogin.aspx.cs">
+      <DependentUpon>NewCustomerLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewCustomerLogin.aspx.designer.cs">
+      <DependentUpon>NewCustomerLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewCustomerTransact.aspx.cs">
+      <DependentUpon>NewCustomerTransact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewCustomerTransact.aspx.designer.cs">
+      <DependentUpon>NewCustomerTransact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.aspx.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payment.aspx.designer.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Performance.aspx.cs">
+      <DependentUpon>Performance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Performance.aspx.designer.cs">
+      <DependentUpon>Performance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PlainLink.aspx.cs">
+      <DependentUpon>PlainLink.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PlainLink.aspx.designer.cs">
+      <DependentUpon>PlainLink.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintChart.aspx.cs">
+      <DependentUpon>PrintChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintChart.aspx.designer.cs">
+      <DependentUpon>PrintChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="privateACCOUNT.aspx.cs">
+      <DependentUpon>privateACCOUNT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="privateACCOUNT.aspx.designer.cs">
+      <DependentUpon>privateACCOUNT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="privateaccountview.aspx.cs">
+      <DependentUpon>privateaccountview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="privateaccountview.aspx.designer.cs">
+      <DependentUpon>privateaccountview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="privateLoan.aspx.cs">
+      <DependentUpon>privateLoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="privateLoan.aspx.designer.cs">
+      <DependentUpon>privateLoan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="privateloanview.aspx.cs">
+      <DependentUpon>privateloanview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="privateloanview.aspx.designer.cs">
+      <DependentUpon>privateloanview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="privateTMT.aspx.cs">
+      <DependentUpon>privateTMT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="privateTMT.aspx.designer.cs">
+      <DependentUpon>privateTMT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="privatetmtview.aspx.cs">
+      <DependentUpon>privatetmtview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="privatetmtview.aspx.designer.cs">
+      <DependentUpon>privatetmtview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Scripts\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Scripts\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="imagerying\Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="imagerying\Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="imagerying\Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="imagerying\Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="imagerying\Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="imagerying\Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="imagerying\Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="imagerying\Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard.aspx.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard.aspx.designer.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContractAgreement.aspx.cs">
+      <DependentUpon>ContractAgreement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContractAgreement.aspx.designer.cs">
+      <DependentUpon>ContractAgreement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerTrasact.aspx.cs">
+      <DependentUpon>CustomerTrasact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerTrasact.aspx.designer.cs">
+      <DependentUpon>CustomerTrasact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataClasses1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Deposite.aspx.cs">
+      <DependentUpon>Deposite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Deposite.aspx.designer.cs">
+      <DependentUpon>Deposite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerDashboard2.aspx.cs">
+      <DependentUpon>CustomerDashboard2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerDashboard2.aspx.designer.cs">
+      <DependentUpon>CustomerDashboard2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerLogin.aspx.cs">
+      <DependentUpon>CustomerLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerLogin.aspx.designer.cs">
+      <DependentUpon>CustomerLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoanBioData.aspx.cs">
+      <DependentUpon>LoanBioData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoanBioData.aspx.designer.cs">
+      <DependentUpon>LoanBioData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoanExtension.aspx.cs">
+      <DependentUpon>LoanExtension.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoanExtension.aspx.designer.cs">
+      <DependentUpon>LoanExtension.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoanExtensionAg.aspx.cs">
+      <DependentUpon>LoanExtensionAg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoanExtensionAg.aspx.designer.cs">
+      <DependentUpon>LoanExtensionAg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoanLogin.aspx.cs">
+      <DependentUpon>LoanLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoanLogin.aspx.designer.cs">
+      <DependentUpon>LoanLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoanPanel.aspx.cs">
+      <DependentUpon>LoanPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoanPanel.aspx.designer.cs">
+      <DependentUpon>LoanPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MakeDeposite.aspx.cs">
+      <DependentUpon>MakeDeposite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakeDeposite.aspx.designer.cs">
+      <DependentUpon>MakeDeposite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MakeWithdraw.aspx.cs">
+      <DependentUpon>MakeWithdraw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakeWithdraw.aspx.designer.cs">
+      <DependentUpon>MakeWithdraw.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="StaffGuarantor.aspx.cs">
+      <DependentUpon>StaffGuarantor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffGuarantor.aspx.designer.cs">
+      <DependentUpon>StaffGuarantor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teller.aspx.cs">
+      <DependentUpon>Teller.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teller.aspx.designer.cs">
+      <DependentUpon>Teller.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TellerTill.aspx.cs">
+      <DependentUpon>TellerTill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TellerTill.aspx.designer.cs">
+      <DependentUpon>TellerTill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TillApproved.aspx.cs">
+      <DependentUpon>TillApproved.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TillApproved.aspx.designer.cs">
+      <DependentUpon>TillApproved.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tmt1.aspx.cs">
+      <DependentUpon>Tmt1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tmt1.aspx.designer.cs">
+      <DependentUpon>Tmt1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tmt2.aspx.cs">
+      <DependentUpon>Tmt2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tmt2.aspx.designer.cs">
+      <DependentUpon>Tmt2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TmtApproval.aspx.cs">
+      <DependentUpon>TmtApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TmtApproval.aspx.designer.cs">
+      <DependentUpon>TmtApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TmtCheckApproved.aspx.cs">
+      <DependentUpon>TmtCheckApproved.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TmtCheckApproved.aspx.designer.cs">
+      <DependentUpon>TmtCheckApproved.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TmtCheckRecordLogin.aspx.cs">
+      <DependentUpon>TmtCheckRecordLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TmtCheckRecordLogin.aspx.designer.cs">
+      <DependentUpon>TmtCheckRecordLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TmtFieldOfficerLogin.aspx.cs">
+      <DependentUpon>TmtFieldOfficerLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TmtFieldOfficerLogin.aspx.designer.cs">
+      <DependentUpon>TmtFieldOfficerLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TmtLogin.aspx.cs">
+      <DependentUpon>TmtLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TmtLogin.aspx.designer.cs">
+      <DependentUpon>TmtLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Total.aspx.cs">
+      <DependentUpon>Total.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Total.aspx.designer.cs">
+      <DependentUpon>Total.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction.aspx.cs">
+      <DependentUpon>Transaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction.aspx.designer.cs">
+      <DependentUpon>Transaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionLogin.aspx.cs">
+      <DependentUpon>TransactionLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TransactionLogin.aspx.designer.cs">
+      <DependentUpon>TransactionLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="video.aspx.cs">
+      <DependentUpon>video.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="video.aspx.designer.cs">
+      <DependentUpon>video.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCollateral.aspx.cs">
+      <DependentUpon>ViewCollateral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewCollateral.aspx.designer.cs">
+      <DependentUpon>ViewCollateral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewInventory.aspx.cs">
+      <DependentUpon>ViewInventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewInventory.aspx.designer.cs">
+      <DependentUpon>ViewInventory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WeeklyLoanSMS.aspx.cs">
+      <DependentUpon>WeeklyLoanSMS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WeeklyLoanSMS.aspx.designer.cs">
+      <DependentUpon>WeeklyLoanSMS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Withdraw.aspx.cs">
+      <DependentUpon>Withdraw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Withdraw.aspx.designer.cs">
+      <DependentUpon>Withdraw.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WithdrawAdmin.aspx.cs">
+      <DependentUpon>WithdrawAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WithdrawAdmin.aspx.designer.cs">
+      <DependentUpon>WithdrawAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WithdrawChart.aspx.cs">
+      <DependentUpon>WithdrawChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WithdrawChart.aspx.designer.cs">
+      <DependentUpon>WithdrawChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WithdrawLogin.aspx.cs">
+      <DependentUpon>WithdrawLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WithdrawLogin.aspx.designer.cs">
+      <DependentUpon>WithdrawLogin.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="imagerying\Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataClasses1.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="icon\module1.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataClasses1.dbml.layout">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50278</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
